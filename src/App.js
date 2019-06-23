@@ -44,20 +44,27 @@ class App extends React.Component {
     this.setState({todo: updatedList});
     console.log(this.state);
     
-   
   }
-
   completed = (e) => {
     e.target.style ="text-decoration: line-through";
+    e.target.className = "remove-it";
   }
 
+  clearCompleted = (e) => {
+    e.preventDefault();
+    let toSearch = document.getElementsByClassName("remove-it");
+    toSearch.forEach(function(element) {
+     element.parentNode.remove();
+    });
+  
+  }
 
   render() {
     
     return (
       <div>
         <h2>Welcome to your Todo App!</h2>
-        <TodoList todo={this.state.todo} completed={this.completed}/>
+        <TodoList todo={this.state.todo} completed={this.completed} erase={this.clearCompleted}/>
         <TodoForm adding={this.addTodoItem}/>
       </div>
     );
