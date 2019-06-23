@@ -12,7 +12,7 @@ import Todo from  './Todo.js';
 const TodoList = props =>{
   let items = props.todo;
   return(
-    <div id="canvas">{items.map(x => <Todo task={x} key={x.id} completed={props.completed} />)}</div>
+    <div id="canvas">{items.map(x => <Todo task={x} key={x.id} completed={props.completed}  />)}</div>
   );
 };
 

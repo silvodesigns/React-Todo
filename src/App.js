@@ -2,6 +2,7 @@ import React from 'react';
 import TodoForm from './components/TodoComponents/TodoForm';
 import TodoList from './components/TodoComponents/TodoList';
 import { random } from 'node-forge';
+import './components/TodoComponents/Todo.css';
 
 class App extends React.Component {
 // you will need a place to store your state in this component.
@@ -18,18 +19,7 @@ class App extends React.Component {
   constructor(){
     super();
     this.state ={
-     todo: [
-        {
-          task: 'Organize Garage',
-          id: 1528817077286,
-          completed: false
-        },
-        {
-          task: 'Bake Cookies',
-          id: 1528817084358,
-          completed: false
-        }
-      ]
+     todo: []
     };
   };
 
@@ -42,20 +32,22 @@ class App extends React.Component {
     let newEntry = {task:itemTask.value, id: Date.now(), completed:false};
     let updatedList = this.state.todo.concat(newEntry);
     this.setState({todo: updatedList});
-    console.log(this.state);
+
     
   }
   completed = (e) => {
-    e.target.style ="text-decoration: line-through";
-    e.target.className = "remove-it";
+    e.target.className= "remove-it";
   }
 
   clearCompleted = (e) => {
     e.preventDefault();
     let toSearch = document.getElementsByClassName("remove-it");
-    toSearch.forEach(function(element) {
-     element.parentNode.remove();
+    let converted = Array.from(toSearch);
+    converted.forEach(function(element) {
+      element.parentNode.remove();
     });
+    
+
   
   }
 
@@ -64,8 +56,8 @@ class App extends React.Component {
     return (
       <div>
         <h2>Welcome to your Todo App!</h2>
-        <TodoList todo={this.state.todo} completed={this.completed} erase={this.clearCompleted}/>
-        <TodoForm adding={this.addTodoItem}/>
+        <TodoList todo={this.state.todo} completed={this.completed} />
+        <TodoForm adding={this.addTodoItem} erase={this.clearCompleted}/>
       </div>
     );
   }
