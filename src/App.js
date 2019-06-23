@@ -47,13 +47,17 @@ class App extends React.Component {
    
   }
 
+  completed = (e) => {
+    e.target.style ="text-decoration: line-through";
+  }
+
 
   render() {
-
+    
     return (
       <div>
         <h2>Welcome to your Todo App!</h2>
-        <TodoList todo={this.state.todo}/>
+        <TodoList todo={this.state.todo} completed={this.completed}/>
         <TodoForm adding={this.addTodoItem}/>
       </div>
     );

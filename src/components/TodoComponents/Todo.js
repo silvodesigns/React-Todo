@@ -3,10 +3,9 @@ import React from 'react';
 
 const Todo = props =>{
 
-    
   return(
     <div>
-        <p>{props.task.task}</p>
+        <p onClick={props.completed}>{props.task.task}</p>
     </div>
   );
 };
