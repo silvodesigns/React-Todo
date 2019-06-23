@@ -1,10 +1,11 @@
 import React from 'react';
 
-const TodoForm = () => {
+const TodoForm = props => {
+
     return(
         <form>
-            <input type="text" name="item"/>
-            <button>Add to List</button>
+            <input type="text" id="item"/>
+            <button onClick={props.adding}>Add to List</button>
            
         </form>
     )
