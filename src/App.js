@@ -32,6 +32,7 @@ class App extends React.Component {
     let newEntry = {task:itemTask.value, id: Date.now(), completed:false};
     let updatedList = this.state.todo.concat(newEntry);
     this.setState({todo: updatedList});
+    itemTask.value = "";
 
     
   }
