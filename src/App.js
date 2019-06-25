@@ -1,4 +1,6 @@
 import React from 'react';
+import './app.css';
+import './normalize.css';
 import TodoForm from './components/TodoComponents/TodoForm';
 import TodoList from './components/TodoComponents/TodoList';
 import { random } from 'node-forge';
@@ -56,9 +58,13 @@ class App extends React.Component {
     
     return (
       <div>
-        <h2>Welcome to your Todo App!</h2>
-        <TodoList todo={this.state.todo} completed={this.completed} />
-        <TodoForm adding={this.addTodoItem} erase={this.clearCompleted}/>
+          <section className="header">
+              <h1 className="logo">Todo App</h1>
+              <TodoForm adding={this.addTodoItem} erase={this.clearCompleted}/>
+          </section>
+          <section className="display">
+               <TodoList todo={this.state.todo} completed={this.completed} />
+          </section>
       </div>
     );
   }

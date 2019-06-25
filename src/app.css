@@ -1,0 +1,11 @@
+body{
+    background-color: #7fe5b2;
+}
+
+.logo{
+    font-family: 'Pacifico', cursive;
+    font-size: 72px;
+    color: #ffff00;
+    margin:0;
+    padding-right:40px;
+}
