@@ -1,5 +1,6 @@
 body{
     background-color: #7fe5b2;
+    font-family: 'Roboto', sans-serif;
 }
 
 .logo{
@@ -9,3 +10,4 @@ body{
     margin:0;
     padding-right:40px;
 }
+

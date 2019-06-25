@@ -6,7 +6,6 @@
 .header{
     display:flex;
     height: 190px;
-    border:1px solid black;
     align-items:center;
 }
 
@@ -16,4 +15,21 @@
     border:none;
     font-size:60px;
     color: #d1d1d1;
+}
+
+.add-icon{
+    width:65px;
+    height:65px;
+    margin-left:100px;
+}
+
+.task{
+    width:90%;
+    background-color: #006837;
+    color:white;
+    font-size:72px;
+    height:98px;
+    padding-left:50px;
+    margin:0 auto;
+
 }

@@ -54,6 +54,10 @@ class App extends React.Component {
   
   }
 
+  writting = (e) => {
+    e.preventDefault();
+  }
+
   render() {
     
     return (
