@@ -2,7 +2,6 @@
     text-decoration: line-through;
 }
 
-
 .header{
     display:flex;
     height: 190px;
@@ -27,6 +26,12 @@
     transition: width, height 0.2s ease-in-out;
 }
 
+.add-icon:hover{
+    cursor: pointer;
+    width:75px;
+    height:75px;
+}
+
 .task-description{
     flex-grow:2;
 }
@@ -42,12 +47,17 @@
     padding:20px;
 }
 
-.add-icon:hover{
+.delete-icon:hover{
     cursor: pointer;
-    width:75px;
-    height:75px;
 }
 
+.edit-icon:hover{
+    cursor:pointer;
+}
+
+.ribbon-icon:hover{
+    cursor:pointer;
+}
 .task{
     width:90%;
     background-color: #006837;

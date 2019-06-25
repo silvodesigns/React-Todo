@@ -39,7 +39,8 @@ class App extends React.Component {
     
   }
   completed = (e) => {
-    e.target.className= "remove-it";
+      e.target.src="icons/completed.svg";
+      e.target.parentNode.parentNode.style="background-color: blue";
   }
 
   clearCompleted = (e) => {
