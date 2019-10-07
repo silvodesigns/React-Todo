@@ -35,10 +35,7 @@ class App extends React.Component {
 
     
   }
-  completed = (e) => {
-    e.target.className= "remove-it";
-  }
-
+ 
   clearCompleted = (e) => {
     e.preventDefault();
     let toSearch = document.getElementsByClassName("remove-it");
@@ -57,7 +54,7 @@ class App extends React.Component {
       <div>
         <div className="header-todo"><h2>TODO MASTER</h2></div>
         <TodoForm adding={this.addTodoItem} erase={this.clearCompleted}/>
-        <TodoList todo={this.state.todo} completed={this.completed} />
+        <TodoList todo={this.state.todo}  />
       </div>
     );
   }

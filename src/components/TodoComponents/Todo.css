@@ -39,6 +39,38 @@ body{
     font-size:36px;
     padding:25px;
     margin-bottom:25px;
+  
+}
+
+.task:hover{
+    cursor: pointer;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+}
+#item{
+    height:80px;
+    border:0px;
+    font-size:32px;
+    color:grey;
+}
+
+#item:focus{
+    background-color:lightsteelblue;
+}
+
+button{
+    border:none;
+    color:white;
+    background-color: #14ff67;
+    height:80px;
+}
+
+button:hover{
+    cursor: pointer;
+    opacity:0.8;
 }
 
 
