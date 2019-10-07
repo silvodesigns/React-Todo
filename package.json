@@ -2,6 +2,7 @@
   "name": "lambda-todo",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://silvodesigns.github.io/React-Todo/",
   "dependencies": {
     "normalize.css": "^8.0.1",
     "react": "^16.8.6",
