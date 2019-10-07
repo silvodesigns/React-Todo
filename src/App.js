@@ -1,7 +1,6 @@
 import React from 'react';
 import TodoForm from './components/TodoComponents/TodoForm';
 import TodoList from './components/TodoComponents/TodoList';
-import { random } from 'node-forge';
 import './components/TodoComponents/Todo.css';
 
 class App extends React.Component {
@@ -57,8 +56,8 @@ class App extends React.Component {
     return (
       <div>
         <div className="header-todo"><h2>TODO MASTER</h2></div>
-        <TodoList todo={this.state.todo} completed={this.completed} />
         <TodoForm adding={this.addTodoItem} erase={this.clearCompleted}/>
+        <TodoList todo={this.state.todo} completed={this.completed} />
       </div>
     );
   }

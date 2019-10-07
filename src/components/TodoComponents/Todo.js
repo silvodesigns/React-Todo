@@ -4,9 +4,9 @@ import React from 'react';
 const Todo = props =>{
 
   return(
-    <ul class="task">
-        <li onClick={props.completed}>{props.task.task}</li>
-    </ul>
+    <div class="task">
+        <p onClick={props.completed}>{props.task.task}</p>
+    </div>
   );
 };
 
